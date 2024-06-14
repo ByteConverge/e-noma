@@ -37,9 +37,9 @@ export default function LoggedInNavBarClient(){
               <NavLink to="/clientLoggedInAbout" Style={({isActive})=> isActive? activeStyles : null} onClick={removeHandle}>About us</NavLink>
               <NavLink to="/clientLoggedInFaq" >FAQ</NavLink>
             </div>
-               <Link to="/">
-                Log out
-               </Link> 
+            <Link to="/" style={{border:"1px solid black",color:"white",height:"2rem", width:"7rem", display:"grid",placeItems:"center",borderRadius:"10px"}}>
+                log out 
+                </Link>
              </div>
         <span className="hamburger" onClick={handleClick}>&#9776;</span>
     </nav> 
