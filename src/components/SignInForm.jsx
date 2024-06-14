@@ -111,16 +111,16 @@ function SignInForm() {
 
         setTimeout(() => {
           if(data.User.role === "client"){
-            // navigate("/clientLoggedInHome" , {
-            //   replace:true
-            // })
-            history.replace("/clientLoggedInHome")
+            navigate("/clientLoggedInHome" , {
+              replace:true
+            })
+   
           }else if(data.User.role === "lender"){
            
-            // navigate("/lenderLoggedInHome" , {
-            //   replace: true
-            // })
-            history.replace("/lenderLoggedInHome")
+            navigate("/lenderLoggedInHome" , {
+              replace: true
+            })
+            
           }
         
               // navigate('/');
