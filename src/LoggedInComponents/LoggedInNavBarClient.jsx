@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom"
+import {NavLink , Link} from "react-router-dom"
 import { useState } from "react"
 
 export default function LoggedInNavBarClient(){
@@ -37,8 +37,9 @@ export default function LoggedInNavBarClient(){
               <NavLink to="/clientLoggedInAbout" Style={({isActive})=> isActive? activeStyles : null} onClick={removeHandle}>About us</NavLink>
               <NavLink to="/clientLoggedInFaq" >FAQ</NavLink>
             </div>
-        
-                
+               <Link to="/">
+                Log out
+               </Link> 
              </div>
         <span className="hamburger" onClick={handleClick}>&#9776;</span>
     </nav> 

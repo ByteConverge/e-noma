@@ -41,7 +41,9 @@ export default function LoggedInNavBarLender(){
              <Link to="/dashboard" style={{background:"black",color:"white",height:"2rem", width:"7rem", display:"grid",placeItems:"center",borderRadius:"10px"}}>
              DashBoard
              </Link>
-                
+                <Link to="/">
+                log out 
+                </Link>
              </div>
         <span className="hamburger" onClick={handleClick}>&#9776;</span>
     </nav> 
