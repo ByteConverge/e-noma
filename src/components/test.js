@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , useHistory } from 'react-router-dom';
 import eyeToggle from "../assets/eye-slash.svg"
 
 function SignUpClientForm() {
@@ -16,6 +16,7 @@ function SignUpClientForm() {
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
+ 
 
   function handleChange(e) {
     const { name, value } = e.target;

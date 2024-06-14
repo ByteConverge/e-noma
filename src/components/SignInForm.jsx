@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , useHistory } from 'react-router-dom';
 import eyeToggle from "../assets/eye-slash.svg"
 
 function SignInForm() {
@@ -12,6 +12,7 @@ function SignInForm() {
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
+  const history = useHistory()
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -110,14 +111,16 @@ function SignInForm() {
 
         setTimeout(() => {
           if(data.User.role === "client"){
-            navigate("/clientLoggedInHome" , {
-              replace:true
-            })
+            // navigate("/clientLoggedInHome" , {
+            //   replace:true
+            // })
+            history.replace("/clientLoggedInHome")
           }else if(data.User.role === "lender"){
            
-            navigate("/lenderLoggedInHome" , {
-              replace: true
-            })
+            // navigate("/lenderLoggedInHome" , {
+            //   replace: true
+            // })
+            history.replace("/lenderLoggedInHome")
           }
         
               // navigate('/');
